@@ -1,21 +1,15 @@
 {
   "name": "formily-antd-complete",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Formily bindings for ALL Ant Design v5 components",
   "license": "MIT",
-  "main": "lib",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "engines": {
     "npm": ">=3.0.0"
   },
-  "module": "esm",
-  "umd:main": "dist/formily.antd.umd.production.js",
-  "unpkg": "dist/formily.antd.umd.production.js",
-  "jsdelivr": "dist/formily.antd.umd.production.js",
-  "jsnext:main": "esm",
   "sideEffects": [
-    "dist/*",
-    "esm/*.js",
     "lib/*.js",
     "src/*.ts",
     "*.less",
@@ -29,8 +23,6 @@
   },
   "files": [
     "lib",
-    "esm",
-    "dist",
     "src"
   ],
   "keywords": [

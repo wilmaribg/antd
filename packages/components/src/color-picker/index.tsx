@@ -32,8 +32,15 @@ const ColorPickerPreview: React.FC<{
 export const ColorPicker = connect(
   AntdColorPicker,
   mapProps((props, field) => {
+    const { onChange, value, ...rest } = props
     return {
-      ...props,
+      ...rest,
+      value,
+      onChange: (color: Color, hex: string) => {
+        // Formily expects a string value, not a Color object
+        // Use the hex string directly
+        onChange?.(hex)
+      },
     }
   }),
   mapReadPretty(ColorPickerPreview)
