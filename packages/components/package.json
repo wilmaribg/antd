@@ -1,6 +1,7 @@
 {
-  "name": "@formily/antd-v5",
-  "version": "1.2.4",
+  "name": "formily-antd-complete",
+  "version": "1.0.0",
+  "description": "Formily bindings for ALL Ant Design v5 components",
   "license": "MIT",
   "main": "lib",
   "types": "lib/index.d.ts",
@@ -24,6 +25,13 @@
   "scripts": {
     "build": "formily-tpl build"
   },
+  "keywords": [
+    "formily",
+    "antd",
+    "ant-design",
+    "form",
+    "react"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/formilyjs/antd.git"

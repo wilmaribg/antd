@@ -1,0 +1,41 @@
+# formily-antd-complete
+
+Bindings de Formily para TODOS los componentes de Ant Design v5.
+
+## Arquitectura
+
+- Cada componente usa connect() de @formily/react
+- Los componentes mapean dataSource a options
+- Todos soportan modo readPretty (solo lectura)
+
+## Estructura
+
+src/{component}/index.tsx - Componente conectado
+src/preview-text/ - Componentes de solo lectura
+src/__builtins__/ - Hooks y utilidades
+src/index.ts - Exports
+
+## Patron de Componente
+
+import { connect, mapProps, mapReadPretty } from "@formily/react"
+import { Component as AntdComponent } from "antd"
+
+export const Component = connect(
+  AntdComponent,
+  mapProps({ dataSource: "options" }),
+  mapReadPretty(PreviewComponent)
+)
+
+## Componentes Disponibles
+
+Basicos: Input, Password, NumberPicker, AutoComplete, Mentions
+Seleccion: Select, Cascader, TreeSelect, Checkbox, Radio, Switch, Transfer, Segmented
+Especiales: Slider, Rate, ColorPicker, DatePicker, TimePicker, Upload
+Arrays: ArrayTable, ArrayCards, ArrayItems, ArrayTabs, ArrayCollapse
+Layout: Form, FormItem, FormLayout, FormGrid, Space, FormStep, FormTab
+
+## Al Agregar Componentes
+
+1. Crear src/{nombre-kebab}/index.tsx
+2. Usar patron connect + mapProps + mapReadPretty
+3. Exportar en src/index.ts
