@@ -23,8 +23,16 @@
     "**/*/style.js"
   ],
   "scripts": {
-    "build": "formily-tpl build"
+    "build": "tsc -p tsconfig.build.json || true",
+    "build:original": "formily-tpl build",
+    "prepublishOnly": "npm run build"
   },
+  "files": [
+    "lib",
+    "esm",
+    "dist",
+    "src"
+  ],
   "keywords": [
     "formily",
     "antd",
@@ -34,12 +42,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/formilyjs/antd.git"
+    "url": "git+https://github.com/wilmaribg/antd.git"
   },
   "bugs": {
-    "url": "https://github.com/formilyjs/antd/issues"
+    "url": "https://github.com/wilmaribg/antd/issues"
   },
-  "homepage": "https://github.com/formilyjs/antd#readme",
+  "homepage": "https://github.com/wilmaribg/antd#readme",
   "publishConfig": {
     "access": "public"
   },

@@ -1,10 +1,13 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "./lib",
-    "paths": {
-      "@formily/*": ["packages/*"]
-    },
-    "declaration": true
-  }
+    "declaration": true,
+    "declarationDir": "./lib",
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "noEmitOnError": false
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": ["./src/__tests__/*"]
 }
