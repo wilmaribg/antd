@@ -1,6 +1,6 @@
 {
   "name": "formily-antd-complete",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Formily bindings for ALL Ant Design v5 components",
   "license": "MIT",
   "main": "lib/index.js",
@@ -63,10 +63,9 @@
     "@formily/reactive": "^2.2.0",
     "@formily/reactive-react": "^2.2.0",
     "@formily/shared": "^2.2.0",
-    "@tiptap/extension-underline": "^2.6.0",
-    "@tiptap/pm": "^2.6.0",
-    "@tiptap/react": "^2.6.0",
-    "@tiptap/starter-kit": "^2.6.0",
+    "@tiptap/extension-underline": "^2.27.2",
+    "@tiptap/react": "^2.27.2",
+    "@tiptap/starter-kit": "^2.27.2",
     "classnames": "^2.2.6",
     "react-sticky-box": "^1.0.2"
   }
